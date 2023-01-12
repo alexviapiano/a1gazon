@@ -1,0 +1,33 @@
+          <h3>Customer comment</h3>
+          <div>
+            “Anthony and his team are great! They are professional, prompt and on time, they provide
+            quality work and they are all so friendly . I would recommend A plus to any of my
+            friends and family!”
+          </div>
+          <div style="float: right">-Tony A.</div>
+          <br />
+          <div style="float: right">
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+          </div>
+
+
+
+        <h3>Customer comment</h3>
+          <div>
+            “A Plus Paint and Varnish have done several projects for us over the last year. We are
+            extremely happy with the quality of the service they have provided. The team is very
+            professional and polite.”
+          </div>
+          <div style="float: right">-John K.</div>
+          <br />
+          <div style="float: right">
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+            <span class="icon fa-star"></span>
+          </div>
