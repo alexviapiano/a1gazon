@@ -74,7 +74,7 @@
           </div>
         </div>
         <a href="#estimation" class="animated jello delay-5s"
-          ><b><p id="qoute">Demande de Soumission</p></b></a
+          ><b><p id="qoute">Obtenir une soumission</p></b></a
         >
         <nav>
           <ul id="menu">
@@ -82,10 +82,13 @@
               <a href="#about"><b>À propos</b></a>
             </li>
             <li>
-              <a href="#service"><b>Service</b></a>
+              <a href="gallery/projectsfr.html"><b>Galerie</b></a>
             </li>
             <li>
-              <a href="gallery/projectsfr.html"><b>Galerie</b></a>
+              <a style="min-width: 50px" href="#service"><b>Service</b></a>
+            </li>
+            <li>
+              <a href="#estimation"><b>Nos joindre</b></a>
             </li>
             <!-- <li><a href="#info"><b>Info</b></a></li> -->
             <!-- <li><a href="#testimonials"><b>Testimonials</b></a></li> -->
@@ -133,6 +136,7 @@
                 privée)
               </li>
             </ul>
+            <button id="btnMap" onclick="displayMap()">Show Map</button>
             <div
               id="map_canvas"
               style="width: 400px; height: 300px; border-radius: 5px; margin-bottom: 10px"
@@ -142,7 +146,7 @@
 
         <!-- Estimation -->
         <article id="estimation">
-          <center><h1 class="major">Demande de Soumission</h1></center>
+          <center><h1 class="major">Obtenir une soumission</h1></center>
           <p>
             Pour nous contacter, veuillez nous appeler au
             <strong>514-297-5594</strong> ou nous envoyer un message en utilisant ce formulaire
@@ -202,6 +206,55 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <style type="text/css">
+      #map_canvas {
+        display: none;
+      }
+    </style>
+
+    <script>
+      function displayMap() {
+        document.getElementById('map_canvas').style.display = 'block';
+        document.getElementById('btnMap').style.display = 'none';
+        initialize();
+      }
+
+      function initialize() {
+        // create the map
+        var myOptions = {
+          zoom: 10,
+          center: new google.maps.LatLng(45.599917, -73.583289),
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+        };
+
+        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+        var marker = new google.maps.Marker({
+          position: { lat: 45.599917, lng: -73.583289 },
+          map: map,
+          title: 'Groupe Atlanta',
+        });
+
+        const flightPlanCoordinates = [
+          { lat: 45.55179539091031, lng: -73.53537650249416 },
+          { lat: 45.59697554388466, lng: -73.64249320171291 },
+          { lat: 45.68242987045758, lng: -73.65897269390041 },
+          { lat: 45.693941831318185, lng: -73.48044486186916 },
+          { lat: 45.55179539091031, lng: -73.53537650249416 },
+        ];
+
+        const flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          geodesic: true,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2,
+        });
+
+        flightPath.setMap(map);
+      }
+    </script>
+
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"
       async
@@ -209,42 +262,5 @@
     ></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"></script>
-
-    <script>
-      document.getElementById('map_canvas').style.display = 'block';
-
-      // create the map
-      var myOptions = {
-        zoom: 10,
-        center: new google.maps.LatLng(45.599917, -73.583289),
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
-      };
-
-      map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-      var marker = new google.maps.Marker({
-        position: { lat: 45.599917, lng: -73.583289 },
-        map: map,
-        title: 'A1 Gazon',
-      });
-
-      const flightPlanCoordinates = [
-        { lat: 45.55179539091031, lng: -73.53537650249416 },
-        { lat: 45.59697554388466, lng: -73.64249320171291 },
-        { lat: 45.68242987045758, lng: -73.65897269390041 },
-        { lat: 45.693941831318185, lng: -73.48044486186916 },
-        { lat: 45.55179539091031, lng: -73.53537650249416 },
-      ];
-
-      const flightPath = new google.maps.Polyline({
-        path: flightPlanCoordinates,
-        geodesic: true,
-        strokeColor: '#FF0000',
-        strokeOpacity: 1.0,
-        strokeWeight: 2,
-      });
-
-      flightPath.setMap(map);
-    </script>
   </body>
 </html>
