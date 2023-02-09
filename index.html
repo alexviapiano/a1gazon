@@ -6,18 +6,6 @@
 -->
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163220302-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-163220302-1');
-    </script>
-
     <title>A1 Gazon</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -31,40 +19,11 @@
     />
   </head>
   <body class="is-preload">
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: 'v7.0',
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'facebook-jssdk');
-    </script>
-
-    <!-- Your Chat Plugin code -->
-    <!-- <div
-      class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="2357599764484869"
-      theme_color="#0f9444"
-    ></div> -->
-
     <!-- Wrapper -->
     <div id="wrapper">
       <footer id="footer" style="transition: none">
         <a
-          href="tel:1-514-111-1111"
+          href="tel:1-514-297-5594"
           class="animated fadeInDown delay-1s"
           style="
             background-color: #0f9444;
@@ -80,7 +39,7 @@
             margin-top: 0px;
           "
         >
-          Call now: 514-XXX-XXXX</a
+          Call now: 514-297-5594</a
         >
 
         <a
@@ -118,6 +77,9 @@
         <nav>
           <ul id="menu">
             <li>
+              <a href="#about"><b>About</b></a>
+            </li>
+            <li>
               <a href="#landscaping"><b>Service</b></a>
             </li>
             <li>
@@ -129,10 +91,43 @@
 
       <!-- Main -->
       <div id="main">
+        <!-- About -->
+        <article id="about">
+          <center>
+            <h1 class="major">About</h1>
+            <p>
+              A1 Gazon has been providing your lawn and garden maintenance services since 2015. What
+              has made us grow exponentially since then, is the distinction of our superior service,
+              our attentiveness and our duty to satisfy each of our customers. We assure you peace
+              of mind from those tasks that overload your busy daily schedule. Our professional and
+              dynamic team performs maintenance work with meticulousness, efficiency and respect of
+              your environment. We are proud of our company's values. A1 Gazon specializes in
+              residential and commercial maintenance services.
+            </p>
+            <img
+              src="images/about.jpg"
+              alt=""
+              style="height: 200px; width: 375px; border-radius: 5px"
+            />
+          </center>
+        </article>
+
         <!-- Interior -->
         <article id="landscaping">
           <center>
             <h1 class="major">Service</h1>
+            <ul style="text-align: left">
+              <li>Tonte de gazon</li>
+              <li>Taille de haies et arbustes</li>
+              <li>Coupe de bordures de gazon</li>
+              <li>Ramassage des feuilles et débris</li>
+              <li>Entretien des plates bandes</li>
+              <li>Ouverture et fermeture de terrain</li>
+              <li>
+                Balais mécanique pour nettoyage printanier de gravel (stationnement et entrée
+                privée)
+              </li>
+            </ul>
             <div
               id="map_canvas"
               style="width: 400px; height: 300px; border-radius: 5px; margin-bottom: 10px"
@@ -204,13 +199,6 @@
     ></script>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"></script>
-
-    <!-- 
-    <style type="text/css">
-      #map_canvas {
-        display: none;
-      }
-    </style> -->
 
     <script>
       document.getElementById('map_canvas').style.display = 'block';

@@ -6,18 +6,6 @@
 -->
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163220302-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-
-      gtag('config', 'UA-163220302-1');
-    </script>
-
     <title>A1 Gazon</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -31,40 +19,11 @@
     />
   </head>
   <body class="is-preload">
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>
-      window.fbAsyncInit = function () {
-        FB.init({
-          xfbml: true,
-          version: 'v7.0',
-        });
-      };
-
-      (function (d, s, id) {
-        var js,
-          fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      })(document, 'script', 'facebook-jssdk');
-    </script>
-
-    <!-- Your Chat Plugin code -->
-    <!-- <div
-      class="fb-customerchat"
-      attribution="setup_tool"
-      page_id="2357599764484869"
-      theme_color="#0f9444"
-    ></div> -->
-
     <!-- Wrapper -->
     <div id="wrapper">
       <footer id="footer" style="transition: none">
         <a
-          href="tel:1-514-111-1111"
+          href="tel:1-514-297-5594"
           class="animated fadeInDown delay-1s"
           style="
             background-color: #0f9444;
@@ -80,7 +39,7 @@
             margin-top: 0px;
           "
         >
-          Appelez-nous au: 514-XXX-XXXX</a
+          Appelez-nous au: 514-297-5594</a
         >
 
         <a
@@ -109,9 +68,9 @@
         <div class="content">
           <div class="inner">
             <img src="images/a1.png" alt="" class="main-logo" />
-            <p style="margin: 0px">
+            <!-- <p style="margin: 0px">
               <strong>Aménagement paysager</strong>
-            </p>
+            </p> -->
           </div>
         </div>
         <a href="#estimation" class="animated jello delay-5s"
@@ -119,6 +78,9 @@
         >
         <nav>
           <ul id="menu">
+            <li>
+              <a href="#about"><b>À propos</b></a>
+            </li>
             <li>
               <a href="#service"><b>Service</b></a>
             </li>
@@ -133,9 +95,49 @@
 
       <!-- Main -->
       <div id="main">
+        <!-- About -->
+        <article id="about">
+          <center>
+            <h1 class="major">À propos</h1>
+            <p>
+              A1 Gazon fournit des services d’entretien de votre pelouse et terrain depuis 2015. Ce
+              qui nous a fait croître exponentiellement depuis, c’est la distinction de notre
+              service de qualité supérieure, notre écoute et notre devoir de satisfaire chacun de
+              nos client(e)s. Nous vous assurons la paix d’esprit de ces tâches qui surchargent vos
+              horaires occupés du quotidien. Notre équipe professionnelle et dynamique, effectue les
+              travaux d’entretien avec minutie, efficacité et respect de votre environnement. Nous
+              sommes fiers des valeurs de notre entreprise. A1 Gazon se spécialise dans les services
+              d’entretien des terrains résidentiels et commerciaux.
+            </p>
+            <img
+              src="images/about.jpg"
+              alt=""
+              style="height: 200px; width: 375px; border-radius: 5px"
+            />
+          </center>
+        </article>
+
         <!-- Interior -->
         <article id="service">
-          <center><h1 class="major">Service</h1></center>
+          <center>
+            <h1 class="major">Service</h1>
+            <ul style="text-align: left">
+              <li>Tonte de gazon</li>
+              <li>Taille de haies et arbustes</li>
+              <li>Coupe de bordures de gazon</li>
+              <li>Ramassage des feuilles et débris</li>
+              <li>Entretien des plates bandes</li>
+              <li>Ouverture et fermeture de terrain</li>
+              <li>
+                Balais mécanique pour nettoyage printanier de gravel (stationnement et entrée
+                privée)
+              </li>
+            </ul>
+            <div
+              id="map_canvas"
+              style="width: 400px; height: 300px; border-radius: 5px; margin-bottom: 10px"
+            ></div>
+          </center>
         </article>
 
         <!-- Estimation -->
@@ -143,7 +145,7 @@
           <center><h1 class="major">Demande de Soumission</h1></center>
           <p>
             Pour nous contacter, veuillez nous appeler au
-            <strong>514-XXX-XXXX</strong> ou nous envoyer un message en utilisant ce formulaire
+            <strong>514-297-5594</strong> ou nous envoyer un message en utilisant ce formulaire
           </p>
           <form method="post" action="https://formspree.io/f/xgebvwwk">
             <div class="field half first">
@@ -199,5 +201,50 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"
+      async
+      defer
+    ></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"></script>
+
+    <script>
+      document.getElementById('map_canvas').style.display = 'block';
+
+      // create the map
+      var myOptions = {
+        zoom: 10,
+        center: new google.maps.LatLng(45.599917, -73.583289),
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      };
+
+      map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
+
+      var marker = new google.maps.Marker({
+        position: { lat: 45.599917, lng: -73.583289 },
+        map: map,
+        title: 'A1 Gazon',
+      });
+
+      const flightPlanCoordinates = [
+        { lat: 45.55179539091031, lng: -73.53537650249416 },
+        { lat: 45.59697554388466, lng: -73.64249320171291 },
+        { lat: 45.68242987045758, lng: -73.65897269390041 },
+        { lat: 45.693941831318185, lng: -73.48044486186916 },
+        { lat: 45.55179539091031, lng: -73.53537650249416 },
+      ];
+
+      const flightPath = new google.maps.Polyline({
+        path: flightPlanCoordinates,
+        geodesic: true,
+        strokeColor: '#FF0000',
+        strokeOpacity: 1.0,
+        strokeWeight: 2,
+      });
+
+      flightPath.setMap(map);
+    </script>
   </body>
 </html>
