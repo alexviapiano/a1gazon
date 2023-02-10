@@ -79,14 +79,14 @@
             <li>
               <a href="#about"><b>About</b></a>
             </li>
+            <li style="min-width: 50px">
+              <a href="#landscaping"><b>Service</b></a>
+            </li>
             <li>
               <a href="gallery/projects.html"><b>Gallery</b></a>
             </li>
             <li>
-              <a style="min-width: 50px" href="#landscaping"><b>Service</b></a>
-            </li>
-            <li>
-              <a href="#estimation"><b>Contact us</b></a>
+              <a href="#estimation"><b>Contact</b></a>
             </li>
           </ul>
         </nav>
@@ -110,7 +110,7 @@
             <img
               src="images/about.jpg"
               alt=""
-              style="height: 200px; width: 375px; border-radius: 5px"
+              style="max-width: 90%; height: auto; border-radius: 5px"
             />
           </center>
         </article>
@@ -130,18 +130,25 @@
                 Mechanical brooms for spring cleaning of gravel (parking and private entrance)
               </li>
             </ul>
-            <button id="btnMap" onclick="displayMap()">Show Map</button>
-            <div
-              id="map_canvas"
-              style="width: 400px; height: 300px; border-radius: 5px; margin-bottom: 10px"
-            ></div>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1WcM2ftsNRxuz-THLLC-8TbWO1FcdCj0&ehbc=2E312F&z=11"
+              width="280"
+              height="350"
+              class="map_mobile"
+            ></iframe>
+            <iframe
+              src="https://www.google.com/maps/d/embed?mid=1WcM2ftsNRxuz-THLLC-8TbWO1FcdCj0&ehbc=2E312F&z=11"
+              width="550"
+              height="400"
+              class="map_desktop"
+            ></iframe>
           </center>
         </article>
 
         <!-- Estimation -->
         <article id="estimation">
-          <center><h1 class="major">Estimation</h1></center>
-          <p>To get in touch with us send us a message using this form</p>
+          <center><h1 class="major">Contact Us</h1></center>
+          <p>To get in touch with us send us a message using this form:</p>
           <form method="post" action="https://formspree.io/f/xgebvwwk">
             <div class="field half first">
               <label for="name">Name</label>
@@ -196,60 +203,24 @@
     <script src="assets/js/main.js"></script>
 
     <style type="text/css">
-      #map_canvas {
+      .map_desktop {
         display: none;
+        border-radius: 5px;
+      }
+
+      .map_mobile {
+        display: block;
+        border-radius: 5px;
+      }
+
+      @media screen and (min-width: 600px) {
+        .map_desktop {
+          display: block;
+        }
+        .map_mobile {
+          display: none;
+        }
       }
     </style>
-
-    <script>
-      function displayMap() {
-        document.getElementById('map_canvas').style.display = 'block';
-        document.getElementById('btnMap').style.display = 'none';
-        initialize();
-      }
-
-      function initialize() {
-        // create the map
-        var myOptions = {
-          zoom: 10,
-          center: new google.maps.LatLng(45.599917, -73.583289),
-          mapTypeId: google.maps.MapTypeId.ROADMAP,
-        };
-
-        map = new google.maps.Map(document.getElementById('map_canvas'), myOptions);
-
-        var marker = new google.maps.Marker({
-          position: { lat: 45.599917, lng: -73.583289 },
-          map: map,
-          title: 'Groupe Atlanta',
-        });
-
-        const flightPlanCoordinates = [
-          { lat: 45.55179539091031, lng: -73.53537650249416 },
-          { lat: 45.59697554388466, lng: -73.64249320171291 },
-          { lat: 45.68242987045758, lng: -73.65897269390041 },
-          { lat: 45.693941831318185, lng: -73.48044486186916 },
-          { lat: 45.55179539091031, lng: -73.53537650249416 },
-        ];
-
-        const flightPath = new google.maps.Polyline({
-          path: flightPlanCoordinates,
-          geodesic: true,
-          strokeColor: '#FF0000',
-          strokeOpacity: 1.0,
-          strokeWeight: 2,
-        });
-
-        flightPath.setMap(map);
-      }
-    </script>
-
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"
-      async
-      defer
-    ></script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-ljTOCCgZZlyDuu2xVR_pdV9QHiz2zfk&callback=myMap"></script>
   </body>
 </html>
