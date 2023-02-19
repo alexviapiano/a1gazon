@@ -1253,7 +1253,7 @@ button {
   -webkit-transition-delay: 0.75s;
   -ms-transition-delay: 0.75s;
   transition-delay: 0.75s;
-  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.13), rgba(19, 21, 25, 0)),
+  background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.25)),
     url(../../images/overlay.png);
   background-size: 100%;
   background-position: center, center;

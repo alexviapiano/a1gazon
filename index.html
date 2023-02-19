@@ -110,11 +110,11 @@
               sommes fiers des valeurs de notre entreprise. A1 Gazon se spécialise dans les services
               d’entretien des terrains résidentiels et commerciaux.
             </p>
-            <img
+            <!-- <img
               src="images/about.jpg"
               alt=""
               style="max-width: 90%; height: auto; border-radius: 5px"
-            />
+            /> -->
           </center>
         </article>
 
@@ -150,20 +150,32 @@
             <span style="text-align: left; text-decoration: underline; font-weight: bold"
               >Zone de service:</span
             >
-            <p style="font-size: 14px">
-              Anjou, Montréal-Est, Montréal-Nord, Nouveau-Rosemont, Pointe-aux-Trembles,
-              Rivière-des-Prairies, Rosemont-La Petite-Patrie, Saint-Léonard et Tétreaultville
-            </p>
+            <ul style="text-align: left; max-width: 90%">
+              <li>Anjou</li>
+              <li>Montréal-Est</li>
+              <li>Montréal-Nord</li>
+              <li>Nouveau-Rosemont</li>
+              <li>Pointe-aux-Trembles</li>
+              <li>Rivière-des-Prairies</li>
+              <li>Rosemont-La Petite-Patrie</li>
+              <li>Saint-Léonard</li>
+              <li>Tétreaultville</li>
+            </ul>
           </center>
         </article>
 
         <!-- Estimation -->
         <article id="estimation">
           <center><h1 class="major">Nos Joindre</h1></center>
+
           <p>
-            Pour nous contacter, veuillez nous appeler au
-            <strong>514-996-1221</strong> ou nous envoyer un message en utilisant ce formulaire:
+            <b>Téléphone:</b> 1-514-996-1221
+            <br />
+            <b>Courriel:</b> info@a1gazon.com <br />
+            <b>Heures:</b> Lundi - Vendredi (8am to 5pm)
           </p>
+
+          <p>Pour nous contacter, nous envoyer un message en utilisant ce formulaire:</p>
           <form method="post" action="https://formspree.io/f/xgebvwwk">
             <div class="field half first">
               <label for="name">Nom</label>
@@ -173,6 +185,34 @@
             <div class="field half">
               <label for="email">Couriel</label>
               <input type="text" name="email" id="email" />
+            </div>
+            <br />
+            <div class="field half">
+              <label for="email">Téléphone</label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+            <br />
+            <div class="field half">
+              <label for="email">Adresse des services demandés</label>
+              <input type="text" name="address" id="address" />
+            </div>
+            <br />
+            <div class="field">
+              <label for="demo-category">Service</label>
+              <div class="select-wrapper">
+                <select name="category" id="demo-category">
+                  <option value="">-</option>
+                  <option value="lawn_mowing">Lawn mowing</option>
+                  <option value="trimming_hedges_shrubs">Trimming of hedges and shrubs</option>
+                  <option value="cutting_lawn_edges">Cutting of lawn edges</option>
+                  <option value="picking_up_leaves">Picking up leaves and debris</option>
+                  <option value="meantenance_flowerbeds">Maintenance of flowerbeds</option>
+                  <option value="open_closing">Opening and closing of land</option>
+                  <option value="mechanical_brooms">
+                    Mechanical brooms for spring cleaning of gravel (parking and private entrance)
+                  </option>
+                </select>
+              </div>
             </div>
             <br />
             <div class="field">

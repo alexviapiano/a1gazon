@@ -107,11 +107,11 @@
               your environment. We are proud of our company's values. A1 Gazon specializes in
               residential and commercial maintenance services.
             </p>
-            <img
+            <!-- <img
               src="images/about.jpg"
               alt=""
               style="max-width: 90%; height: auto; border-radius: 5px"
-            />
+            /> -->
           </center>
         </article>
 
@@ -147,16 +147,30 @@
             <span style="text-align: left; text-decoration: underline; font-weight: bold"
               >Service Area:</span
             >
-            <p style="font-size: 14px">
-              Anjou, Montréal-Est, Montréal-Nord, Nouveau-Rosemont, Pointe-aux-Trembles,
-              Rivière-des-Prairies, Rosemont-La Petite-Patrie, Saint-Léonard and Tétreaultville
-            </p>
+            <ul style="text-align: left; max-width: 90%">
+              <li>Anjou</li>
+              <li>Montréal-Est</li>
+              <li>Montréal-Nord</li>
+              <li>Nouveau-Rosemont</li>
+              <li>Pointe-aux-Trembles</li>
+              <li>Rivière-des-Prairies</li>
+              <li>Rosemont-La Petite-Patrie</li>
+              <li>Saint-Léonard</li>
+              <li>Tétreaultville</li>
+            </ul>
           </center>
         </article>
 
         <!-- Estimation -->
         <article id="estimation">
           <center><h1 class="major">Contact Us</h1></center>
+          <p>
+            <b>Phone:</b> 1-514-996-1221
+            <br />
+            <b>Email:</b> info@a1gazon.com <br />
+            <b>Hours:</b> Monday - Friday (8am to 5pm)
+          </p>
+
           <p>To get in touch with us send us a message using this form:</p>
           <form method="post" action="https://formspree.io/f/xgebvwwk">
             <div class="field half first">
@@ -169,8 +183,36 @@
               <input type="text" name="email" id="email" />
             </div>
             <br />
+            <div class="field half">
+              <label for="email">Phone</label>
+              <input type="text" name="phone" id="phone" />
+            </div>
+            <br />
+            <div class="field half">
+              <label for="email">Address of the requested services</label>
+              <input type="text" name="address" id="address" />
+            </div>
+            <br />
             <div class="field">
-              <label for="message">Message</label>
+              <label for="demo-category">Service</label>
+              <div class="select-wrapper">
+                <select name="category" id="demo-category">
+                  <option value="">-</option>
+                  <option value="lawn_mowing">Lawn mowing</option>
+                  <option value="trimming_hedges_shrubs">Trimming of hedges and shrubs</option>
+                  <option value="cutting_lawn_edges">Cutting of lawn edges</option>
+                  <option value="picking_up_leaves">Picking up leaves and debris</option>
+                  <option value="meantenance_flowerbeds">Maintenance of flowerbeds</option>
+                  <option value="open_closing">Opening and closing of land</option>
+                  <option value="mechanical_brooms">
+                    Mechanical brooms for spring cleaning of gravel (parking and private entrance)
+                  </option>
+                </select>
+              </div>
+            </div>
+            <br />
+            <div class="field">
+              <label for="message">Additional Informations</label>
               <textarea name="message" id="message" rows="4"></textarea>
             </div>
             <br />
@@ -210,6 +252,15 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <!-- 
+    <script>
+      var intervalId = window.setInterval(function () {
+        const element = document.getElementById('div-02');
+      element.remove();
+      }, 5000);
+    </script> 
+    -->
 
     <style type="text/css">
       .map_desktop {
