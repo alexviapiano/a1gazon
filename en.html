@@ -244,7 +244,9 @@
     </div>
 
     <!-- BG -->
-    <div id="bg"></div>
+    <div id="bg1" style="display: block" class="animated fadeIn"></div>
+    <div id="bg2" style="display: none" class="animated fadeIn"></div>
+    <div id="bg3" style="display: none" class="animated fadeIn"></div>
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
@@ -253,14 +255,23 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- 
     <script>
-      var intervalId = window.setInterval(function () {
-        const element = document.getElementById('div-02');
-      element.remove();
-      }, 5000);
-    </script> 
-    -->
+      window.onload = function () {
+        function changeImage() {
+          var bgs = ['bg1', 'bg2', 'bg3'];
+          var i = Math.floor(Math.random() * 3) + 1;
+
+          for (var j = 0; j < bgs.length; j++) {
+            if (bgs[j] == 'bg' + i) {
+              document.getElementById(bgs[j]).style.display = 'block';
+            } else {
+              document.getElementById(bgs[j]).style.display = 'none';
+            }
+          }
+        }
+        window.setInterval(changeImage, 5000);
+      };
+    </script>
 
     <style type="text/css">
       .map_desktop {
