@@ -2192,3 +2192,9 @@ body.is-preload #main .thumb {
 #footer .copyright a {
   color: inherit;
 }
+
+@media screen and (max-width: 450px) {
+  .d-none-mobile {
+    display: none !important;
+  }
+}
