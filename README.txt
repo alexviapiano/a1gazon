@@ -1,30 +1,57 @@
-Dimension by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Entretien Paysager A1 Website
 
+A professional lawn maintenance and landscaping website for Entretien Paysager A1, serving the greater Montreal area since 2015.
 
-This is Dimension, a fun little one-pager with modal-ized (is that a word?) "pages"
-and a cool depth effect (click on a menu item to see what I mean). Simple, fully
-responsive, and kitted out with all the usual pre-styled elements you'd expect.
-Hope you dig it :)
+## Overview
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+This website showcases Entretien Paysager A1's professional landscaping and lawn maintenance services. Built with a responsive design to ensure optimal viewing across all devices, the site features:
 
-(* = not included)
+- Bilingual support (French/English)
+- Service area map integration
+- Request quote functionality via Formspree
+- Google Ads conversion tracking
 
-AJ
-aj@lkn.io | @ajlkn
+## Features
 
+- **Responsive Design**: Fully mobile-responsive layout that adapts to any screen size
+- **Interactive Elements**: Animated elements provide a modern, engaging user experience
+- **Bilingual Support**: Complete French and English versions to serve Montreal's diverse population
+- **Service Showcase**: Clear presentation of all lawn maintenance and landscaping services
+- **Contact Forms**: Easy-to-use estimation request forms with Google Ads conversion tracking
 
-Credits:
+## Services Highlighted
 
-	Demo Images:
-		Unsplash (unsplash.com)
+- Lawn mowing
+- Trimming of hedges and shrubs
+- Cutting of lawn edges
+- Leaf and debris collection
+- Flowerbed maintenance
+- Property opening and closing
+- Spring cleaning with mechanical brooms for gravel areas
 
-	Icons:
-		Font Awesome (fontawesome.io)
+## Technical Details
 
-	Other:
-		jQuery (jquery.com)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+The site utilizes the following technologies:
+
+- HTML5/CSS3
+- jQuery
+- Google Maps integration
+- Formspree for form handling
+- Google Analytics and Ads conversion tracking
+
+## Credits
+
+- Base template: Dimension by HTML5 UP
+- Icons: Font Awesome
+- Animations: Animate.css
+- Form Processing: Formspree.io
+- Maps: Google Maps
+- jQuery library
+
+## License
+
+Original template is free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+---
+
+© Entretien Paysager A1
